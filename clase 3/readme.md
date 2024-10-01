@@ -5,7 +5,7 @@ Este repositorio contiene ejercicios enfocados en realizar un análisis explorat
 ## Características del Dataset
 
 Fuente:
-[https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs](Fuente)
+[Fuente](https://www.kaggle.com/datasets/abdulszz/spotify-most-streamed-songs)
 
 El dataset incluye las siguientes características:
 
@@ -82,7 +82,7 @@ El dataset incluye las siguientes características:
 
    - Seleccionar las 10 canciones con más streams utilizando PandaSQL.
 
-2. **Canciones lanzadas después de 2015 con más de 100 millones de streams:**
+2. **Canciones lanzadas en el 2023 con más de 100 millones de streams:**
 
    - Filtrar las canciones lanzadas después del año 2015 que tengan más de 100 millones de streams.
 
