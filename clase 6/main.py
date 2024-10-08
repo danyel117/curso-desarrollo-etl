@@ -31,8 +31,6 @@ def extract():
     dataset['precios'] = pd.read_csv('./inputs/precio.csv', sep=';')
     dataset['usuarios'] = pd.read_csv('./inputs/usuario.csv', sep=';')
 
-
-
 def transform():
     print('Transformando datos...')
     # calcular el precio por mes por cultivo
@@ -47,12 +45,18 @@ def transform():
     dataset['ingreso_por_cultivo'] = execute_sql('ingreso_por_cultivo')
     # calcular el ingreso por mes por mes
     dataset['ingreso_por_mes'] = execute_sql('ingreso_por_mes')
+    # calcular el total de hectareas por finca
+    dataset['hectareas_por_finca'] = execute_sql('hectareas_por_finca')
+    # calcular el ingreso por hectarea por finca
+    dataset['ingreso_por_hectarea'] = execute_sql('ingreso_por_hectarea')
+
 
 def load():
     print('Cargando datos...')
     dataset['ingreso_por_finca'].to_csv('./outputs/ingreso_por_finca.csv', index=False)
     dataset['ingreso_por_cultivo'].to_csv('./outputs/ingreso_por_cultivo.csv', index=False)
     dataset['ingreso_por_mes'].to_csv('./outputs/ingreso_por_mes.csv', index=False)
+    dataset['ingreso_por_hectarea'].to_csv('./outputs/ingreso_por_hectarea.csv', index=False)
 
 
 def execute_etl():
